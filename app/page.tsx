@@ -77,6 +77,7 @@ export default function Home() {
               <ScrollingImages images={scrollImages} />
             </div>
           </div>
+          <ScrollingImages images={scrollImages} direction="down"></ScrollingImages>
         </div>
       </ScrollReveal>
 

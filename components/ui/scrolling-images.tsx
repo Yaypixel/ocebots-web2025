@@ -4,10 +4,12 @@ import { useEffect, useRef } from "react"
 
 interface Props {
     images: string[]
+    direction?: "up" | "down"
 }
 
 export default function ScrollingImages({
-    images
+    images,
+    direction = "up"
 }: Props) {
     const validBaseImages = images.filter(src => src && typeof src === 'string' && src.trim().length > 0);
     const imagesToDesplay = [...validBaseImages, ...validBaseImages]
@@ -20,9 +22,12 @@ export default function ScrollingImages({
       const distanceToScroll = contentRef.current.clientHeight
       const duration = distanceToScroll / 50
 
+      let keyframes =
+      direction === "up" ? ["0px", `-${distanceToScroll}px`] : [`-${distanceToScroll}px`, "0px"]
+
         const animationControls = animate (
           scope.current,
-          {translateY: -distanceToScroll},
+          {translateY: keyframes},
           {
           duration: duration,
           ease: 'linear',
