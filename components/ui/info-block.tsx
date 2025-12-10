@@ -36,9 +36,9 @@ export default function InfoBlock({
                 <div className={`inset-0 transition-all duration-300 ${isHovered ? "brightness-75 scale-105" : "brightness-100 scale-100"}`}>
                     {children}
                 </div>
-                <div className={`absolute inset-0  ${isHovered ? 'bg-blue-400/20' : 'bg-blue-400/50'} transition-all duration-200`}></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <h2 className={`bitcount-prop-single-ocebots text-8xl text-white ${isHovered ? "z-20 opacity-100 scale-110" : "z-0 opacity-60 scale-100"}  transition-all duration-200 z-1`}>{header}</h2>
+                <div className={`absolute inset-0  ${isHovered ? 'bg-blue-500/50 -z-50' : 'bg-blue-400/50'} transition-all duration-200`}></div>
+                <div className={`absolute inset-0 flex items-center justify-center ${isHovered ? '-z-50' : ""}`}>
+                  <h2 className={`bitcount-prop-single-ocebots text-8xl text-white ${isHovered ? "opacity-100 scale-110" : "opacity-60 scale-100"}  transition-all duration-200`}>{header}</h2>
             </div>
         </ParallaxHover>
     </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -67,6 +68,18 @@
       background-position: 350% 50%, 350% 50%;
     }
   }
+  --animate-fade-through: fadeThrough 2s linear;
+  @keyframes fadeThrough {
+    0% {
+      opacity: 100%;
+    }
+    50%{
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
   @keyframes moveInCircle {
   0% {
     transform: rotate(0deg);
@@ -94,7 +107,17 @@
   from {
     backgroundPosition: 50% 50%, 50% 50%;}
   to {
-    backgroundPosition: 350% 50%, 350% 50%;}}
+    backgroundPosition: 350% 50%, 350% 50%;}
+  }
+  --animate-scroll: infinite-scroll 10s linear infinite;
+  @keyframes infinite-scroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%)
+    }
+  }
 }
 
 :root {
@@ -185,4 +208,11 @@
     "CRSV" 0.5,
     "ELSH" 0,
     "ELXP" 0;
+}
+
+.jetbrains-mono-ocebots {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }

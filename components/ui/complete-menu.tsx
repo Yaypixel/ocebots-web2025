@@ -25,8 +25,9 @@ export default function NavMenu() {
         <NavigationMenu className="max-w-none justify-between flex-wrap">
           <NavigationMenuList className="flex-wrap gap-6 md:gap-10">
             <NavigationMenuItem>
-              <a href="/" className="block">
-                <Avatar className="h-12 w-12 md:h-14 md:w-14 cursor-pointer transition-transform duration-200 hover:scale-125">
+              <a href="/" className="flex items-center cursor-pointer transition-transform duration-200 hover:scale-125">
+              <h2 className="bitcount-prop-single-ocebots text-white text-5xl inline-block">9033</h2>
+                <Avatar className="h-12 w-12 md:h-14 md:w-14 ml-2">
                   <AvatarImage src="/ocebot-no-gear-stroke.png"></AvatarImage>'
                   <AvatarFallback className="bg-transparent"></AvatarFallback>
                 </Avatar>
