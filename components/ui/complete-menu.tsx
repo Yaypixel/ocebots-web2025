@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import {
@@ -61,9 +62,16 @@ export default function NavMenu() {
             >
               <h2 className="bitcount-prop-single-ocebots text-white text-4xl md:text-5xl inline-block">9033</h2>
               <Avatar className="h-10 w-10 md:h-14 md:w-14 ml-2">
-                <AvatarImage src="/ocebot-no-gear-stroke.png" alt="Ocebots Logo" />
-                <AvatarFallback className="bg-transparent">OB</AvatarFallback>
-              </Avatar>
+                 <Image
+                   src="/ocebot-no-gear-stroke.svg"
+                   alt="Ocebots Logo"
+                   fill
+                   className="object-cover"
+                   priority
+                   sizes="56px" // h-14/w-14 ~ 56px
+                 />
+                 <AvatarFallback className="bg-transparent">OB</AvatarFallback>
+               </Avatar>
             </Link>
           </div>
 
