@@ -58,46 +58,7 @@ export default function FirstPage() {
               </div>
             </ScrollReveal>
 
-            {/* Core Values */}
-            <ScrollReveal>
-              <div className="bg-blue-400 rounded-lg p-6 md:p-10 mb-8 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-white mb-8 text-center">
-                  Core Values
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <CoreValueCard
-                    icon={<Lightbulb className="w-12 h-12" />}
-                    title="Discovery"
-                    description="We explore new skills and ideas"
-                  />
-                  <CoreValueCard
-                    icon={<Users className="w-12 h-12" />}
-                    title="Teamwork"
-                    description="We work together as a team"
-                  />
-                  <CoreValueCard
-                    icon={<Trophy className="w-12 h-12" />}
-                    title="Innovation"
-                    description="We use creativity and persistence to solve problems"
-                  />
-                  <CoreValueCard
-                    icon={<Target className="w-12 h-12" />}
-                    title="Impact"
-                    description="We apply what we learn to improve our world"
-                  />
-                  <CoreValueCard
-                    icon={<Rocket className="w-12 h-12" />}
-                    title="Inclusion"
-                    description="We respect each other and embrace our differences"
-                  />
-                  <CoreValueCard
-                    icon={<Globe className="w-12 h-12" />}
-                    title="Fun"
-                    description="We enjoy and celebrate what we do!"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
+            {/* Add core values here eventually */}
 
             {/* Programs Overview */}
             <ScrollReveal>
@@ -123,7 +84,7 @@ export default function FirstPage() {
                   <ProgramCard
                     title="FIRST® Robotics Competition"
                     ageGroup="Ages 14-18"
-                    description="Teams of high school students work with professional mentors to design, build, and program industrial-size robots to compete in a fast-paced field game. This is where Ocebots competes!"
+                    description="Teams of high school students work with professional mentors to design, build, and program industrial-size robots to compete in a fast-paced field game."
                     bgColor="bg-blue-100"
                     accentColor="text-blue-600"
                     highlight={true}
