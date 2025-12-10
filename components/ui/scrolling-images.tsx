@@ -38,29 +38,29 @@ export default function ScrollingImages({
     }, [animate, scope])
 
     return (
-    <div className="h-300 w-100 overflow-hidden relative bg-blue-400 border-5 border-blue-400 rounded-lg">
+    <div className="h-full w-full overflow-hidden relative bg-blue-400 border-4 md:border-5 border-blue-400 rounded-lg">
       <motion.div ref={scope} className="absolute inset-0">
         <div ref={contentRef}>
           {imagesToDesplay.map((src, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-3 md:mb-4">
               <Image
                   src={src}
-                  alt={`Image ${index + 1}`}
-                  width={200}
-                  height={200}
-                  className="block w-full object-cover rounded-lg shadow-md"
+                  alt={`Ocebots activity ${index + 1}`}
+                  width={400}
+                  height={300}
+                  className="block w-full h-48 md:h-56 lg:h-64 object-cover rounded-lg shadow-md"
               />
             </div>
           ))}
           {validBaseImages.map((src, index) => (
-            <div key={`dup-${index}`} className="mb-4">
-              <Image 
+            <div key={`dup-${index}`} className="mb-3 md:mb-4">
+              <Image
                   src={src} 
-                  alt={`Image ${index + 1} duplicate`} 
-                  width={200} 
-                  height={200} 
-                  className="block w-full object-cover rounded-lg shadow-md"
-                  priority={true}
+                  alt={`Ocebots activity ${index + 1} duplicate`}
+                  width={400}
+                  height={300}
+                  className="block w-full h-48 md:h-56 lg:h-64 object-cover rounded-lg shadow-md"
+                  priority={index < 2}
               />
             </div>
           ))}

@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <> 
     <NavMenu />
-    <div className="relative min-h-screen w-full bg-blue-300 overflow-hidden">
+    <div className="relative min-h-screen w-full bg-blue-300 overflow-x-hidden">
       <FlickeringGrid className="z-0 absolute inset-0 size-full"
       squareSize={4}
       gridGap={6}
@@ -37,48 +37,51 @@ export default function Home() {
       />
     
      <ScrollReveal>
-        <div className="hero container relative w-500 mx-auto pt-10 z-10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-          <ParallaxHover strength={0} zoom={isHovered ? 1.12 : 1} className="relative rounded-lg">
-            <img src="/BBOTS2025.jpg" className="w-full h-full object-cover"></img>
-            <div className={`absolute inset-0  ${isHovered ? 'bg-transparent' : 'bg-blue-400/50'} transition-all duration-200`}></div>
-            
-            </ParallaxHover>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className={`bitcount-prop-single-ocebots text-8xl text-white ${isHovered ? 'scale-125' : ''}  transition-all duration-200`}>OCEBOTS</h2>
+        <div className="hero container relative max-w-7xl mx-auto pt-6 md:pt-10 px-4 z-10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+          <ParallaxHover strength={0} zoom={isHovered ? 1.12 : 1} className="relative rounded-lg overflow-hidden">
+            <img src="/BBOTS2025.jpg" alt="Ocebots Team" className="w-full h-full object-cover" />
+            <div className={`absolute inset-0 ${isHovered ? 'bg-transparent' : 'bg-blue-400/50'} transition-all duration-200`}></div>
+          </ParallaxHover>
+          <div className="absolute inset-0 flex items-center justify-center px-4">
+            <h2 className={`bitcount-prop-single-ocebots text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white ${isHovered ? 'scale-110 md:scale-125' : ''} transition-all duration-200 text-center`}>OCEBOTS</h2>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 justify-items-center">
+            <InfoBlock className="" header="ABOUT US" href="/about">
+              <img src="/charlie.png" alt="About Us" className="w-full h-64 md:h-80 object-cover" />
+            </InfoBlock>
+            <InfoBlock className="" header="ROBOTS" href="/robots">
+              <img src="/bbot25.png" alt="Our Robots" className="w-full h-64 md:h-80 object-cover" />
+            </InfoBlock>
+            <InfoBlock className="md:col-span-2 lg:col-span-1" header="OUTREACH" href="/outreach">
+              <img src="/outreach4.png" alt="Outreach Programs" className="w-full h-64 md:h-80 object-cover object-[25%_75%]" />
+            </InfoBlock>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            <div className="w-full lg:w-[45%] p-6 md:p-8 lg:p-12 bg-blue-400 rounded-lg flex flex-col justify-center">
+              <h2 className="bitcount-prop-single-ocebots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6">Inspiring A New Generation Of STEM Leaders</h2>
+              <p className="jetbrains-mono-ocebots text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ligula ac nulla aliquam volutpat. Integer eu erat aliquam lacus interdum eleifend in vel ipsum. Sed consequat sollicitudin iaculis. Donec convallis sit amet mauris in cursus. Integer facilisis finibus nisl, molestie mattis nibh vulputate et. In urna augue, viverra a molestie at, porta non diam. Proin vitae blandit tellus, vitae lobortis dui. Nulla quam enim, semper at tincidunt venenatis, volutpat in quam.
+              </p>
             </div>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal>
-        <div className="flex gap-10 justify-center items-center">
-          <InfoBlock className="mx-auto" header="ABOUT US" href="/about">
-            <img src="/charlie.png" className="w-150 h-100 object-cover"></img>
-          </InfoBlock>
-          <InfoBlock className="mx-auto" header="ROBOTS" href="/robots">
-            <img src="/bbot25.png" className="w-150 h-100 object-cover"></img>
-          </InfoBlock>
-          <InfoBlock className="mx-auto" header="OUTREACH" href="/outreach">
-            <img src="/outreach4.png" className="w-150 h-100 object-[25%_75%]"></img>
-          </InfoBlock>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal>
-        <div className="h-300 z-10 pt-30 pl-30 flex">
-          <div className="w-[35%] pl-15 pt-15 pb-15 bg-blue-400 rounded-lg flex flex-col justify-center">
-            <h2 className="bitcount-prop-single-ocebots text-7xl text-white">Inspiring A New Generation Of STEM Leaders</h2>
-            <p className="jetbrains-mono-ocebots text-3xl w-120 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ligula ac nulla aliquam volutpat. Integer eu erat aliquam lacus interdum eleifend in vel ipsum. Sed consequat sollicitudin iaculis. Donec convallis sit amet mauris in cursus. Integer facilisis finibus nisl, molestie mattis nibh vulputate et. In urna augue, viverra a molestie at, porta non diam. Proin vitae blandit tellus, vitae lobortis dui. Nulla quam enim, semper at tincidunt venenatis, volutpat in quam.</p>
-          </div>
-          <div className="w-[45%] h-300 pb-15 pl-15">
-            <ScrollingImages images={scrollImages}></ScrollingImages>
+            <div className="w-full lg:w-[55%] h-64 md:h-80 lg:h-auto">
+              <ScrollingImages images={scrollImages} />
+            </div>
           </div>
         </div>
       </ScrollReveal>
 
-      <div className="heign">
-
-      </div>
-      </div>
+      <div className="h-12 md:h-20"></div>
+    </div>
     </>
   );
 }
