@@ -51,7 +51,7 @@ export default function Home() {
         <ScrollReveal>
            <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12 max-w-7xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
-              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ABOUT US" href="/about">
+              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ABOUT US" href="/about" textClassName="mt-32">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
                   <img src="/charlie.png" alt="About Us" className="w-full h-full object-cover" />
                 </div>
