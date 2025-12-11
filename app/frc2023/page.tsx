@@ -22,10 +22,10 @@ export default function FRC2023Page() {
           <ScrollReveal>
             <div className="container mx-auto px-4 py-12 md:py-20">
               <div className="text-center">
-                <h1 className="bitcount-prop-single-ocebots text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
+                <h1 className="outfit-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
                   Tim
                 </h1>
-                <p className="jetbrains-mono-ocebots text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto">
+                <p className="outfit-body text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto">
                   Charged Up - FRC 2023
                 </p>
               </div>
@@ -35,7 +35,7 @@ export default function FRC2023Page() {
           <div className="container mx-auto px-4 pb-12">
             <ScrollReveal>
               <div className="bg-white/95 backdrop-blur rounded-lg p-6 md:p-10 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-blue-600 mb-6">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-blue-600 mb-6">
                   About Tim
                 </h2>
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-4">

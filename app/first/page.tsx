@@ -25,10 +25,10 @@ export default function FirstPage() {
           <ScrollReveal>
             <div className="container mx-auto px-4 py-12 md:py-20">
               <div className="text-center">
-                <h1 className="bitcount-prop-single-ocebots text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
+                <h1 className="outfit-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
                   What is FIRST?
                 </h1>
-                <p className="jetbrains-mono-ocebots text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto">
+                <p className="outfit-body text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto">
                   For Inspiration and Recognition of Science and Technology
                 </p>
               </div>
@@ -40,7 +40,7 @@ export default function FirstPage() {
             {/* Introduction */}
             <ScrollReveal>
               <div className="bg-white/95 backdrop-blur rounded-lg p-6 md:p-10 mb-8 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-blue-600 mb-6">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-blue-600 mb-6">
                   About FIRST
                 </h2>
                 <div className="space-y-4 text-gray-800">
@@ -64,7 +64,7 @@ export default function FirstPage() {
             {/* Programs Overview */}
             <ScrollReveal>
               <div className="bg-white/95 backdrop-blur rounded-lg p-6 md:p-10 mb-8 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-blue-600 mb-8">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-blue-600 mb-8">
                   FIRST Programs
                 </h2>
                 <div className="space-y-6">
@@ -97,7 +97,7 @@ export default function FirstPage() {
             {/* FRC Specific */}
             <ScrollReveal>
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-6 md:p-10 mb-8 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-white mb-6">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-white mb-6">
                   FIRST Robotics Competition (FRC)
                 </h2>
                 <div className="space-y-4 text-white/95">
@@ -118,7 +118,7 @@ export default function FirstPage() {
             {/* Competition Season */}
             <ScrollReveal>
               <div className="bg-white/95 backdrop-blur rounded-lg p-6 md:p-10 mb-8 shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-blue-600 mb-6">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-blue-600 mb-6">
                   Competition Season Timeline
                 </h2>
                 <div className="space-y-4">
@@ -149,7 +149,7 @@ export default function FirstPage() {
             {/* Call to Action */}
             <ScrollReveal>
               <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-lg p-8 md:p-12 text-center shadow-2xl">
-                <h2 className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-white mb-4">
+                <h2 className="outfit-heading text-4xl md:text-5xl text-white mb-4">
                   Join the Movement
                 </h2>
                 <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">

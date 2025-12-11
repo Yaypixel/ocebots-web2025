@@ -60,7 +60,7 @@ export default function NavMenu() {
               className="flex items-center cursor-pointer transition-transform duration-300 hover:scale-110 focus:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg"
               aria-label="Ocebots Home"
             >
-              <h2 className="bitcount-prop-single-ocebots text-white text-4xl md:text-5xl inline-block">9033</h2>
+              <h2 className="outfit-heading text-white text-4xl md:text-5xl inline-block">9033</h2>
               <Avatar className="h-10 w-10 md:h-14 md:w-14 ml-2">
                  <Image
                    src="/ocebot-no-gear-stroke.svg"
@@ -78,45 +78,45 @@ export default function NavMenu() {
           {/* Desktop Navigation */}
           {!isMobile && (
             <NavigationMenu className="hidden md:flex">
-              <NavigationMenuList className="gap-2 lg:gap-4">
+              <NavigationMenuList className="gap-2 lg:gap-3">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-base lg:text-lg h-10 lg:h-12 px-3 lg:px-4 bg-blue-300/90 hover:bg-[#f0e9d2] data-[state=open]:bg-[#f0e9d2] transition-colors duration-200">
+                  <NavigationMenuTrigger className="text-base lg:text-lg h-10 lg:h-12 px-4 lg:px-5 bg-transparent text-white hover:bg-white/10 data-[state=open]:bg-white/20 transition-colors duration-200 border-0">
                     About
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-blue-300">
-                    <ul className="grid gap-3 p-4 w-[300px] lg:w-[350px]">
-                      <ListItem title="About Us" href="/about">Learn about the Ocebots team</ListItem>
-                      <ListItem title="Donate" href="/donate">Support our robotics program</ListItem>
-                      <ListItem title="Contact" href="/contact">Get in touch with us</ListItem>
+                  <NavigationMenuContent className="bg-blue-500">
+                    <ul className="grid gap-2 p-3 w-[280px] lg:w-[320px]">
+                      <DesktopListItem title="About Us" href="/about" />
+                      <DesktopListItem title="Donate" href="/donate" />
+                      <DesktopListItem title="Contact" href="/contact" />
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-base lg:text-lg h-10 lg:h-12 px-3 lg:px-4 bg-blue-300/90 hover:bg-[#f0e9d2] data-[state=open]:bg-[#f0e9d2] transition-colors duration-200">
+                  <NavigationMenuTrigger className="text-base lg:text-lg h-10 lg:h-12 px-4 lg:px-5 bg-transparent text-white hover:bg-white/10 data-[state=open]:bg-white/20 transition-colors duration-200 border-0">
                     Robots
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-blue-300">
-                    <ul className="grid gap-3 p-4 w-[300px] lg:w-[350px]">
-                      <ListItem title="Bunnybots 2025: Félicette" href="/bbots2025">Our latest Bunnybots robot</ListItem>
-                      <ListItem title="Reefscape: Stuart" href="/frc2025">FRC 2025 competition robot</ListItem>
-                      <ListItem title="Crescendo: Stainless G" href="/frc2024">FRC 2024 competition robot</ListItem>
-                      <ListItem title="Charged Up: Tim" href="/frc2023">FRC 2023 competition robot</ListItem>
+                  <NavigationMenuContent className="bg-blue-500">
+                    <ul className="grid gap-2 p-3 w-[280px] lg:w-[320px]">
+                      <DesktopListItem title="Bunnybots 2025: Félicette" href="/bbots2025" />
+                      <DesktopListItem title="Reefscape: Stuart" href="/frc2025" />
+                      <DesktopListItem title="Crescendo: Stainless G" href="/frc2024" />
+                      <DesktopListItem title="Charged Up: Tim" href="/frc2023" />
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="bg-blue-300/90 hover:bg-[#f0e9d2] transition-colors duration-200" asChild>
-                    <Link href="/first" className="font-medium text-base lg:text-lg inline-flex items-center h-10 lg:h-12 px-3 lg:px-4 rounded-md">
+                  <NavigationMenuLink asChild>
+                    <Link href="/first" className="font-medium text-base lg:text-lg text-white inline-flex items-center h-10 lg:h-12 px-4 lg:px-5 rounded-md hover:bg-white/10 transition-colors duration-200">
                       What is FIRST?
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink className="bg-blue-300/90 hover:bg-[#f0e9d2] transition-colors duration-200" asChild>
-                    <Link href="/outreach" className="font-medium text-base lg:text-lg inline-flex items-center h-10 lg:h-12 px-3 lg:px-4 rounded-md">
+                  <NavigationMenuLink asChild>
+                    <Link href="/outreach" className="font-medium text-base lg:text-lg text-white inline-flex items-center h-10 lg:h-12 px-4 lg:px-5 rounded-md hover:bg-white/10 transition-colors duration-200">
                       Outreach
                     </Link>
                   </NavigationMenuLink>
@@ -202,6 +202,23 @@ export default function NavMenu() {
         )}
       </div>
     </nav>
+  )
+}
+
+function DesktopListItem({
+  title,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  return (
+    <li {...props}>
+      <Link
+        href={href}
+        className="block px-4 py-3 text-white font-medium rounded-lg hover:bg-white/10 transition-colors duration-200"
+      >
+        {title}
+      </Link>
+    </li>
   )
 }
 

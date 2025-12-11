@@ -216,21 +216,16 @@
   }
 }
 
-.bitcount-prop-single-ocebots {
-  font-family: "Bitcount Prop Single", system-ui;
+.outfit-heading {
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700; /* Bold */
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0;
 }
 
-.jetbrains-mono-ocebots {
-  font-family: "JetBrains Mono", monospace;
+.outfit-body {
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400; /* Regular */
   font-style: normal;
 }

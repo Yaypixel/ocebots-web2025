@@ -50,7 +50,7 @@ export function CoreValueCard({ icon, title, description }: { icon: React.ReactN
 export function StatCard({ number, label }: { number: string; label: string }) {
   return (
     <div className="bg-white/20 backdrop-blur rounded-lg p-6 text-center">
-      <div className="bitcount-prop-single-ocebots text-4xl md:text-5xl text-white mb-2">{number}</div>
+      <div className="outfit-heading text-4xl md:text-5xl text-white mb-2">{number}</div>
       <div className="text-lg md:text-xl text-white/90 font-semibold">{label}</div>
     </div>
   );

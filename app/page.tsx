@@ -22,7 +22,7 @@ export default function Home() {
     "/scroll-images/robot-work3.jpg",
     "/scroll-images/xavi-sam-cart.jpg",
     "/scroll-images/robot-work4.jpg",
-    "/scroll-images/bumpers.jpg"
+    "/scroll-images/bumpers.jpg",
   ]
   return (
     <>
@@ -43,33 +43,43 @@ export default function Home() {
               <div className={`absolute inset-0 ${isHovered ? 'bg-transparent' : 'bg-blue-400/50'} transition-all duration-200`}></div>
             </ParallaxHover>
             <div className="absolute inset-0 flex items-center justify-center px-4">
-              <h2 className={`bitcount-prop-single-ocebots text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white ${isHovered ? 'scale-110 md:scale-125' : ''} transition-all duration-200 text-center`}>OCEBOTS</h2>
+              <h2 className={`outfit-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white ${isHovered ? 'scale-110 md:scale-125' : ''} transition-all duration-200 text-center`}>OCEBOTS</h2>
             </div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="container mx-auto px-4 py-8 md:py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 justify-items-center">
-              <InfoBlock className="" header="ABOUT US" href="/about">
-                <img src="/charlie.png" alt="About Us" className="w-full h-64 md:h-80 object-cover" />
+           <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12 max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
+              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ABOUT US" href="/about">
+                <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
+                  <img src="/charlie.png" alt="About Us" className="w-full h-full object-cover" />
+                </div>
               </InfoBlock>
-              <InfoBlock className="" header="ROBOTS" href="/robots">
-                <img src="/bbot25.png" alt="Our Robots" className="w-full h-64 md:h-80 object-cover" />
+              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ROBOTS" href="/robots">
+                <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
+                  <img src="/bbot25.png" alt="Our Robots" className="w-full h-full object-cover" />
+                </div>
               </InfoBlock>
-              <InfoBlock className="md:col-span-2 lg:col-span-1" header="OUTREACH" href="/outreach">
-                <img src="/outreach4.png" alt="Outreach Programs" className="w-full h-64 md:h-80 object-cover object-[25%_75%]" />
+              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="OUTREACH" href="/outreach">
+                <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
+                  <img src="/outreach4.png" alt="Outreach Programs" className="w-full h-full object-cover object-[25%_75%]" />
+                </div>
+              </InfoBlock>
+              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="FIRST" href="/first">
+                <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
+                  <img src="/whatIsFirst.jpeg" alt="FIRST Robotics" className="w-full h-full object-cover object-[50%_25%]" />
+                </div>
               </InfoBlock>
             </div>
           </div>
         </ScrollReveal>
-
         <ScrollReveal>
           <div className="container mx-auto px-4 py-8 md:py-12">
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
               <div className="w-full lg:w-[45%] p-6 md:p-8 lg:p-12 bg-blue-400 rounded-lg flex flex-col justify-center">
-                <h2 className="bitcount-prop-single-ocebots text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6">Inspiring A New Generation Of STEM Leaders</h2>
-                <p className="jetbrains-mono-ocebots text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
+                <h2 className="outfit-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6">Inspiring A New Generation Of STEM Leaders</h2>
+                <p className="outfit-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ligula ac nulla aliquam volutpat. Integer eu erat aliquam lacus interdum eleifend in vel ipsum. Sed consequat sollicitudin iaculis. Donec convallis sit amet mauris in cursus. Integer facilisis finibus nisl, molestie mattis nibh vulputate et. In urna augue, viverra a molestie at, porta non diam. Proin vitae blandit tellus, vitae lobortis dui. Nulla quam enim, semper at tincidunt venenatis, volutpat in quam.
                 </p>
               </div>
