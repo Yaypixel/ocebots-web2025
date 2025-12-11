@@ -10,6 +10,7 @@ interface Props {
     body?: string
     href?: string
     className?: string
+    textClassName?: string | null
 }
 
 export default function InfoBlock({
@@ -17,7 +18,8 @@ export default function InfoBlock({
     href = "/",
     header = "Header Goes Here",
     body = "Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph Body paragraph",
-    className = ""
+    className = "",
+    textClassName = null 
 }: Props) {
     const [isHovered, setIsHovered] = useState(false);
     const containerRef = useRef<HTMLAnchorElement | null>(null);
@@ -88,7 +90,7 @@ export default function InfoBlock({
           <div className="absolute inset-0 flex items-center justify-center p-4">
             <div style={textWrapperStyle} className="text-center">
               <h2
-                className="outfit-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white opacity-100"
+                className={`outfit-heading text-7xl sm:text-xl md:text-5xl lg:text-5xl xl:text-7xl text-white opacity-100 ${textClassName ? (isHovered ? "mt-[70px] transition-none" : textClassName) : ""}`}
                 aria-hidden={false}
               >
                 {header}
