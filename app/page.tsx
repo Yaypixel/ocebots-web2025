@@ -38,7 +38,7 @@ export default function Home() {
 
         <ScrollReveal>
           <div className="hero container relative max-w-7xl mx-auto pt-6 md:pt-10 px-4 z-10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <ParallaxHover strength={0} zoom={isHovered ? 1.12 : 1} className="relative rounded-lg overflow-hidden">
+            <ParallaxHover strength={100} zoom={isHovered ? 1.12 : 1} className="relative rounded-lg overflow-hidden">
               <img src="/BBOTS2025.jpg" alt="Ocebots Team" className="w-full h-full object-cover" />
               <div className={`absolute inset-0 ${isHovered ? 'bg-transparent' : 'bg-blue-400/50'} transition-all duration-200`}></div>
             </ParallaxHover>
