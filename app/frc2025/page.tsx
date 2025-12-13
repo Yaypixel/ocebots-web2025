@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import NavMenu from "@/components/ui/complete-menu";
+import FRC2025Model from "@/components/ui/robot-3d";
 import ScrollReveal from "@/components/ui/reveal-on-scroll";
 import { FlickeringGrid } from "@/components/ui/shadcn-io/flickering-grid";
 
@@ -32,26 +33,19 @@ export default function FRC2025Page() {
             </div>
           </ScrollReveal>
 
-          <div className="container mx-auto px-4 pb-12">
-            <ScrollReveal>
-              <div className="bg-white/95 backdrop-blur rounded-lg p-6 md:p-10 shadow-2xl">
-                <h2 className="outfit-heading text-4xl md:text-5xl text-blue-600 mb-6">
-                  About Stuart
-                </h2>
-                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-4">
-                  Content coming soon...
-                </p>
-                <p className="text-lg text-gray-600">
-                  This page is under construction. Check back soon for details about our FRC 2025 robot!
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
+          <ScrollReveal>
+            <FRC2025Model
+              robotName="STUART"
+              height="100in"
+              weight="100lb"
+              swerve="Max Swerve, NEO Drive & 550 Turning"
+              scoring="L2, L3, & L4 scoring"
+              endgame="Deep Climb (sometimes)"
+            ></FRC2025Model>
+          </ScrollReveal>
           <div className="h-12 md:h-20"></div>
         </div>
       </div>
     </>
   );
 }
-

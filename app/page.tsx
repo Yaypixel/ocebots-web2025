@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import NavMenu from "@/components/ui/complete-menu";
 import InfoBlock from "@/components/ui/info-block";
@@ -7,7 +7,6 @@ import ScrollReveal from "@/components/ui/reveal-on-scroll";
 import ScrollingImages from "@/components/ui/scrolling-images";
 import { FlickeringGrid } from "@/components/ui/shadcn-io/flickering-grid";
 import { useState } from "react";
-
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,12 +22,13 @@ export default function Home() {
     "/scroll-images/xavi-sam-cart.jpg",
     "/scroll-images/robot-work4.jpg",
     "/scroll-images/bumpers.jpg",
-  ]
+  ];
   return (
     <>
       <NavMenu />
       <div className="relative min-h-screen w-full bg-blue-300 overflow-x-hidden">
-        <FlickeringGrid className="z-0 absolute inset-0 size-full"
+        <FlickeringGrid
+          className="z-0 absolute inset-0 size-full"
           squareSize={4}
           gridGap={6}
           color="#63b3ed"
@@ -37,38 +37,89 @@ export default function Home() {
         />
 
         <ScrollReveal>
-          <div className="hero container relative max-w-7xl mx-auto pt-6 md:pt-10 px-4 z-10" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <ParallaxHover strength={0} zoom={isHovered ? 1.12 : 1} className="relative rounded-lg overflow-hidden">
-              <img src="/BBOTS2025.jpg" alt="Ocebots Team" className="w-full h-full object-cover" />
-              <div className={`absolute inset-0 ${isHovered ? 'bg-transparent' : 'bg-blue-400/50'} transition-all duration-200`}></div>
+          <div
+            className="hero container relative max-w-7xl mx-auto pt-6 md:pt-10 px-4 z-10"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <ParallaxHover
+              strength={0}
+              zoom={isHovered ? 1.12 : 1}
+              className="relative rounded-lg overflow-hidden"
+            >
+              <img
+                src="/BBOTS2025.jpg"
+                alt="Ocebots Team"
+                className="w-full h-full object-cover"
+              />
+              <div
+                className={`absolute inset-0 ${isHovered ? "bg-transparent" : "bg-blue-400/50"} transition-all duration-200`}
+              ></div>
             </ParallaxHover>
             <div className="absolute inset-0 flex items-center justify-center px-4">
-              <h2 className={`outfit-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white ${isHovered ? 'scale-110 md:scale-125' : ''} transition-all duration-200 text-center`}>OCEBOTS</h2>
+              <h2
+                className={`outfit-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white ${isHovered ? "scale-110 md:scale-125" : ""} transition-all duration-200 text-center`}
+              >
+                OCEBOTS
+              </h2>
             </div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal>
-           <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12 max-w-7xl">
+          <div className="container mx-auto px-4 py-6 md:py-10 lg:py-12 max-w-7xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-stretch">
-              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ABOUT US" href="/about" textClassName="mt-32">
+              <InfoBlock
+                className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                header="ABOUT US"
+                href="/about"
+                textClassName="mt-32"
+              >
                 <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
-                  <img src="/charlie.png" alt="About Us" className="w-full h-full object-cover" />
+                  <img
+                    src="/charlie.png"
+                    alt="About Us"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </InfoBlock>
-              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="ROBOTS" href="/robots">
+              <InfoBlock
+                className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                header="ROBOTS"
+                href="/robots"
+              >
                 <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
-                  <img src="/bbot25.png" alt="Our Robots" className="w-full h-full object-cover" />
+                  <img
+                    src="/bbot25.png"
+                    alt="Our Robots"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </InfoBlock>
-              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="OUTREACH" href="/outreach">
+              <InfoBlock
+                className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                header="OUTREACH"
+                href="/outreach"
+              >
                 <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
-                  <img src="/outreach4.png" alt="Outreach Programs" className="w-full h-full object-cover object-[25%_75%]" />
+                  <img
+                    src="/outreach4.png"
+                    alt="Outreach Programs"
+                    className="w-full h-full object-cover object-[25%_75%]"
+                  />
                 </div>
               </InfoBlock>
-              <InfoBlock className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" header="FIRST" href="/first">
+              <InfoBlock
+                className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                header="FIRST"
+                href="/first"
+              >
                 <div className="w-full aspect-[4/3] md:aspect-[16/9] rounded-lg overflow-hidden">
-                  <img src="/whatIsFirst.jpeg" alt="FIRST Robotics" className="w-full h-full object-cover object-[50%_25%]" />
+                  <img
+                    src="/whatIsFirst.jpeg"
+                    alt="FIRST Robotics"
+                    className="w-full h-full object-cover object-[50%_25%]"
+                  />
                 </div>
               </InfoBlock>
             </div>
@@ -78,16 +129,28 @@ export default function Home() {
           <div className="container mx-auto px-4 py-8 md:py-12">
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
               <div className="w-full lg:w-[45%] p-6 md:p-8 lg:p-12 bg-blue-400 rounded-lg flex flex-col justify-center">
-                <h2 className="outfit-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6">Inspiring A New Generation Of STEM Leaders</h2>
+                <h2 className="outfit-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6">
+                  Inspiring A New Generation Of STEM Leaders
+                </h2>
                 <p className="outfit-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ligula ac nulla aliquam volutpat. Integer eu erat aliquam lacus interdum eleifend in vel ipsum. Sed consequat sollicitudin iaculis. Donec convallis sit amet mauris in cursus. Integer facilisis finibus nisl, molestie mattis nibh vulputate et. In urna augue, viverra a molestie at, porta non diam. Proin vitae blandit tellus, vitae lobortis dui. Nulla quam enim, semper at tincidunt venenatis, volutpat in quam.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
+                  ligula ac nulla aliquam volutpat. Integer eu erat aliquam
+                  lacus interdum eleifend in vel ipsum. Sed consequat
+                  sollicitudin iaculis. Donec convallis sit amet mauris in
+                  cursus. Integer facilisis finibus nisl, molestie mattis nibh
+                  vulputate et. In urna augue, viverra a molestie at, porta non
+                  diam. Proin vitae blandit tellus, vitae lobortis dui. Nulla
+                  quam enim, semper at tincidunt venenatis, volutpat in quam.
                 </p>
               </div>
               <div className="w-full lg:w-[55%] h-64 md:h-80 lg:h-auto">
                 <ScrollingImages images={scrollImages} />
               </div>
             </div>
-            <ScrollingImages images={scrollImages} direction="down"></ScrollingImages>
+            <ScrollingImages
+              images={scrollImages}
+              direction="down"
+            ></ScrollingImages>
           </div>
         </ScrollReveal>
 
